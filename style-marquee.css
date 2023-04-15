@@ -1,0 +1,18 @@
+.marquee{
+   display: flex;
+   flex-wrap: nowrap;
+}
+
+.marquee-text > * {
+   display: inline-block;
+   animation: news 10s infinite linear;
+   font-size: 20px;
+   white-space: nowrap;
+   overflow: hidden;
+   
+ }
+ 
+ @keyframes news {
+   0% {transform: translateX(0%);}
+   100% {transform: translateX(-550px);}
+ }
