@@ -187,7 +187,7 @@ html {
     position:relative;
     display:flex;
     flex: 1;
-    margin-left: 2px;
+    margin-left: 10px;
     z-index: 3;
  }
 
@@ -276,7 +276,7 @@ html {
     gap: 12px;
     height: var(--sf-height);
     margin-left: 20px;
-    margin-right:40px;
+    margin-right:20px;
 }
 
 .header-main-user {
@@ -555,6 +555,9 @@ gap: 10px;
     }
     .wrapper {
         overflow-x: hidden;
+    }
+    .hidden-sm {
+        display: none
     }
 }
 
