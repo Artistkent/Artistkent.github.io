@@ -9,11 +9,15 @@
 *{
 margin: 0;
 padding: 0;
+overflow:visible;
 }
 
    
 html {
     box-sizing: border-box;
+    --mft-height: 423px;
+    scroll-behavior: smooth;
+    
   }
 
   *, *:before, *:after {
@@ -31,7 +35,7 @@ html {
     --header-height:____;
     --sf-bg:var(--ch-bg, --bg-3rd);
     /*Margin/Padding*/
-    --pad-inner:20px;
+    --pad-inner:52px;
     /*Text*/
     --text-header: 14px;
     --text-size-primary: 16px;
@@ -62,6 +66,14 @@ html {
     max-width: var(--innerWidth);
     margin: 0 auto;
     padding: 0 var(--pad-inner);
+}
+
+.inner-1{
+    --innerWidth: 1920px;
+    width: 100%;
+    max-width: var(--innerWidth);
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 .inner-marquee{
@@ -111,6 +123,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    
 }
   
   body{
@@ -130,6 +143,10 @@ html {
     min-height: 100vh;
   }
 
+  .header-all{
+    position: relative;
+  }
+
   .header-main {
     position: relative;
     display: flex;
@@ -145,7 +162,7 @@ html {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     width:100%;
     height: var(--sf-height);
     padding-right: 20px;
@@ -163,7 +180,7 @@ html {
 }
 
  .logo{
-    margin: auto 5px;
+    margin: auto 2px;
  }
 
  .header-search{
@@ -194,7 +211,7 @@ html {
     display:flex;
     flex: 1;
     height: 100%;
-    padding-left: 20px;
+    padding-left: 10px;
     border-top-left-radius: var(--rounded-normal);
     border-bottom-left-radius: var(--rounded-normal);
  }
@@ -205,7 +222,7 @@ html {
     height: 100%;
     background: rgba(0,0,0,0);
     border: none;
-    padding-left: 5px;
+    padding-left: 10px;
     font-size: var(--text-header);
     margin:auto;
     font-family: "Nanum Gothic", sans-serif;
@@ -219,7 +236,7 @@ html {
 .search-form-separator {
     display: inline-flex;
     align-items: center;
-    margin: 0 10px;
+    margin: 0 20px;
     font-size: 11px;
 }
 
@@ -227,7 +244,7 @@ html {
     position: relative;
     display: inline-flex;
     color:grey;
-    width: 150px;
+    width: 100%;
     cursor: pointer;
     border-radius: 26px;
     vertical-align: middle;
@@ -247,8 +264,8 @@ html {
     position: relative;
     display: flex;
     align-items: center;
-    padding-right: 30px;
-    padding-left: 10px;
+    padding-right: 25px;
+    padding-left: 5px;
     font-weight: 500;
     z-index: 2;
     color:black;
@@ -339,7 +356,7 @@ body.header-above #content {
 
 .heading-topic {
     position: relative;
-    margin: clamp(20px,6vw,60px) 0;
+    margin: clamp(20px,6vw,60px) auto;
     line-height: normal;
 }
 
@@ -349,7 +366,7 @@ body.header-above #content {
     height: auto;
     fill: var(--color-primary);
     font-size:clamp(14px, 13.2vw, 274px);
-    margin:0;
+    margin:auto;
     justify-content: center;
     object-fit: cover;
 }
@@ -525,4 +542,30 @@ gap: 10px;
     white-space:normal;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+
+/*.....................*/
+/*.......@MEDIA*.......*/
+/*.....................*/
+
+@media(max-width: 576px) {
+    :root {
+        --pad-inner: 16px
+    }
+    .wrapper {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 1023px){
+:root {
+    --pad-inner: 24px;
+}
+}
+
+@media (max-width: 1280px){
+:root {
+    --pad-inner: 40px;
+}
 }
