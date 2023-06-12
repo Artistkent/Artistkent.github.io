@@ -100,18 +100,18 @@ background-color: white;
 }
 
 :root{
-    --spin-size:270vh;
+    --spin-size:345vh;
 }
 
 .spin_wrapper{
     position:fixed;
     overflow: hidden;
-    width:calc(100vw - 7.5px);
+    width:calc(100vw - 10px);
     max-width: 1280px;
     height:calc(100vh - 10px);
     max-height:791px;
     margin-left:-7.5px;
-    margin-top: -6px;
+    margin-top: -7.5px;
     border-radius:10px; ;
    
 }
@@ -1035,14 +1035,25 @@ overflow: hidden;
 
 @media screen and (max-width: 750px) {
 
+.spin_wrapper{
+    margin-top:-6px;
+}
+
+    :root{
+        --spin-size:270vh;
+    }
+
     .wrapper{
         max-height: 100%;
+        padding-top:30px;
+        padding-bottom: 30px;
     }
 
     .wrapper_inner{
         height:calc(100vh - 10px);
         max-height:calc(100vh - 10px);
         overflow: scroll;
+        
     }
   
     .center_div{
@@ -1178,9 +1189,12 @@ border: solid rgb(119, 193, 23);
    
 }
 
-@media screen and (min-height: 791px) {
+@media screen and (min-height: 791px) and  (max-width: 750px){
     
+.spin_wrapper{
+max-height: 100vh;
 
+}
    
     }
 
