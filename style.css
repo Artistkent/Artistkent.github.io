@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     transition: all 0.5s ease;
+    
 }
 
 :root{
@@ -108,7 +109,7 @@ background-color: white;
     max-height:791px;
     margin-left:-7.5px;
     margin-top: -7.5px;
-    border-radius:10px; ;
+    border-radius:10px; 
    
 }
 
@@ -207,14 +208,14 @@ background-color: white;
 }
 
 .welcome_text span:nth-child(7){
-    animation: text_flow_from_left ease 1s ;
+    animation: text_flow_from_left ease 1.5s ;
     opacity:1;
     animation-delay: calc(var(--welcome_animation_delay) + 1.2s);
     animation-fill-mode: both;
 }
 
 @keyframes text_flow_from_left{
-    0% {transform: translateY(0) translateX(-20px) scale(1); opacity: 0;}
+    0% {transform: translateY(0) translateX(-20px) scale(1) rotateY(180deg); opacity: 0;}
     100% {transform: translateY() translateX(0) scale(1); opacity: 1;}
 }
 
@@ -254,7 +255,7 @@ background-color: black;
 }
 
 
-.welcome_left_red, .welcome_left_yellow, .welcome_left_green, .welcome_left_blue{
+/*.welcome_left_red, .welcome_left_yellow, .welcome_left_green, .welcome_left_blue{
     display: flex;
     position: absolute;
   height:5px;
@@ -263,9 +264,9 @@ background-color: black;
 }
 
 .welcome_left_red{
-    background-image: linear-gradient(transparent, red);
+    background-image: linear-gradient(transparent, white);
 
-    animation: welcome_left_red 4s infinite linear;
+    animation: welcome_left_red 6s infinite linear;
     animation-delay: calc(var(--welcoome_bounding_color_delay) + 1s);
     animation-fill-mode: both;
    
@@ -293,7 +294,7 @@ background-color: black;
 }
 
 .welcome_left_green{
-    background-image: linear-gradient( transparent, rgb(0, 255, 0));
+    background-image: linear-gradient( transparent, white);
 animation: welcome_left_green 4s infinite linear;
 animation-delay: calc(var(--welcoome_bounding_color_delay) + 3s);
 animation-fill-mode: both;
@@ -321,34 +322,34 @@ z-index:0;
     0% {height:0px;}
     100% {height:400%; z-index:-100;}
    
-}
+}*/
 
 .welcome_color_bounding_bottom{
     overflow:hidden;
     display:block;
     position:relative;
     height:4px;
-    width:300px;
+    width:0px;
     padding:1px;
     padding-left:0px;
     background-color: black;
     transform-origin: bottom left;
-    margin-left:3px;
+    margin-left:0px;
     margin-top:-4px;
     border-radius: 0; 
 
-    animation: welcome_bottom 0.5s ease-out;
+    animation: welcome_bottom 2.5s ease-out;
     animation-delay: 0.52s;
     animation-fill-mode: both;
     z-index:999;
 }
 
 @keyframes welcome_bottom {
-    0% {width:0;}
+    0% {width:0px;}
     100% {width:300px}
 }
 
-.welcome_bottom_red, .welcome_bottom_yellow, .welcome_bottom_green, .welcome_bottom_blue{
+/*.welcome_bottom_red, .welcome_bottom_yellow, .welcome_bottom_green, .welcome_bottom_blue{
     
     display: flex;
     position: absolute;
@@ -359,10 +360,10 @@ z-index:0;
 
 .welcome_bottom_red{
    
-    background-image: linear-gradient(to right, transparent, red);
+    background-image: linear-gradient(to right, transparent, white);
 
-    animation: welcome_bottom_red 4s infinite linear;
-    animation-delay: calc(var(--welcoome_bounding_color_delay) + 2s);
+    animation: welcome_bottom_red 6s infinite linear;
+    animation-delay: calc(var(--welcoome_bounding_color_delay) + 2.5s);
     animation-fill-mode: both;
    
     z-index: -30; 
@@ -419,7 +420,7 @@ z-index:0;
 @keyframes welcome_bottom_blue {
     0% {width:0;}
     100% {width:400%; z-index:-100;}
-}
+}*/
 
 .color_bounding_topright{
     overflow:hidden;
@@ -463,13 +464,17 @@ z-index: 10;
     /*border: dotted 1px black;*/
    padding:10px;
    overflow: hidden;
-   opacity: 0;
-   animation: center_inner_opacity 1s linear;
-   animation-fill-mode: both;
-   animation-delay:1.5s ;
+   opacity: 1;
+   
 
    grid-template-columns:65% 35%;
    grid-template-rows:120px 1fr;
+}
+
+.center_inner>*{
+    animation: center_inner_opacity 1.5s linear;
+    animation-fill-mode: both;
+    animation-delay:2.5s;
 }
    
 @keyframes center_inner_opacity{
@@ -499,9 +504,16 @@ z-index: 10;
     margin-left:-20px;
     grid-column: 1 / -1;
     grid-row: 1 / -0;
-  
+ 
+    animation: center_inner_opacity_frames 0s linear;
+    animation-fill-mode: both;
+    animation-delay:1.9s;
 }
 
+@keyframes center_inner_opacity_frames{
+    0%{opacity: 0;}
+    100%{opacity:1;}
+}
 
 .top_color_bound{
     position: absolute;
@@ -598,9 +610,9 @@ left:0px;
     height:2px;
     margin-left:100%;
     width:400%;
-    background-image:linear-gradient(to left, red, black 25%, yellow 25%, black 50%, rgb(0, 255, 0) 50%, black 75%, blue 75%, black);
+    background-image:linear-gradient(to left, white, black 25%, white 25%, black 50%, white 50%, black 75%, white 75%, black);
 
-    animation: top_right_color 16s  infinite linear;
+    animation: top_right_color 32s  infinite linear;
     animation-delay: calc(var(--welcoome_bounding_color_delay) + 3s);
 
     z-index: 999;
@@ -614,7 +626,7 @@ left:0px;
     width:100%;
     background-color: black;
 
-    animation: top_right_2 16s  infinite linear;
+    animation: top_right_2 32s  infinite linear;
     animation-delay: calc(var(--welcoome_bounding_color_delay) + 9.5s);
 
     z-index: 999;
@@ -628,7 +640,7 @@ left:0px;
     width:2px;
     background-color: black;
 
-    animation: top_right_2 16s  infinite linear;
+   /* animation: top_right_2 16s  infinite linear;*/
     animation-delay: calc(var(--welcoome_bounding_color_delay) + 9.5s);
 
     z-index: 999;
@@ -656,13 +668,13 @@ position: relative;
     height:400%;
     top: 100%;
     width:2px;
-    background-image:linear-gradient(to top, red, black 25%, yellow 25%, black 50%, rgb(0, 255, 0) 50%, black 75%, blue 75%, black);
+    background-image:linear-gradient(to top, white, black 25%, white 25%, black 50%, white 50%, black 75%, white 75%, black);
     
     
     
 
-    animation: right_right_color 16s infinite linear;
-    animation-delay: calc(var(--welcoome_bounding_color_delay) + 6.2s);
+    animation: right_right_color 32s infinite linear;
+    animation-delay: calc(var(--welcoome_bounding_color_delay) + 9.4s);
 
     z-index: 999;
     
@@ -1046,7 +1058,12 @@ overflow: hidden;
         height:calc(100vh - 10px);
         max-height:calc(100vh - 10px);
         overflow: auto;
+        border-radius: 10px;
         
+    }
+
+    ::-webkit-scrollbar{
+        width:0px;
     }
   
     .center_div{
@@ -1060,10 +1077,8 @@ overflow: hidden;
         /*border: dotted 1px black;*/
        padding:10px;
        overflow: auto;
-       opacity: 0;
-       animation: center_inner_opacity 1s linear;
-       animation-fill-mode: both;
-       animation-delay:1.5s ;
+       
+       
     
        grid-template-columns:100%;
        grid-template-rows:120px auto auto auto;
@@ -1097,9 +1112,9 @@ grid-column: 1;
        
         position: fixed;
     margin:auto ;
-    top: 0px;
+    top: 4px;
      width:0%;
-     left:6px;
+     left:3px;
      height:110px;
      background:rgb(255, 255, 255);
      z-index:999999;
@@ -1113,7 +1128,7 @@ grid-column: 1;
     }
 
 @keyframes media_close {
-    0%{width:calc(100% - 10px);
+    0%{width:calc(100% - 6px);
         border: solid black;}
         99%{border: solid black 2px;}
     100%{width:0%;
@@ -1133,7 +1148,7 @@ grid-column: 1;
         display:flex;
         animation: media_open 1s ease;
 animation-fill-mode: both;
-width:calc(100% - 10px);
+width:calc(100% - 6px);
 border: solid black;
     }
 
@@ -1141,7 +1156,7 @@ border: solid black;
         0%{width:0%;
         border:none;}
         1%{border: solid black 2px;}
-        100%{width:calc(100% - 10px);
+        100%{width:calc(100% - 6px);
             border: solid black 2px;}
     }
 
