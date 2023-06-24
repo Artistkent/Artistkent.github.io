@@ -613,7 +613,7 @@ left:0px;
     background-image:linear-gradient(to left, white, black 25%, white 25%, black 50%, white 50%, black 75%, white 75%, black);
 
     animation: top_right_color 32s  infinite linear;
-    animation-delay: calc(var(--welcoome_bounding_color_delay) + 3s);
+    animation-delay: calc(var(--welcoome_bounding_color_delay) + 2s);
 
     z-index: 999;
 }
@@ -674,7 +674,7 @@ position: relative;
     
 
     animation: right_right_color 32s infinite linear;
-    animation-delay: calc(var(--welcoome_bounding_color_delay) + 9.4s);
+    animation-delay: calc(var(--welcoome_bounding_color_delay) + 8.4s);
 
     z-index: 999;
     
