@@ -5,9 +5,9 @@ $( ".icon_wrapper_1" ).click(function() {
 });
 
 $( ".icon_wrapper_1" ).click(function(){
-if($( ".content_3, .content_4, .content_5" ).hasClass("flip_alt")){
-  $( ".content_3, .content_4, .content_5" ).addClass( "flip_alt_back");
-  $( ".content_3, .content_4, .content_5" ).removeClass( "flip_alt");
+if($( ".content_3, .content_4, .content_5, .content_6" ).hasClass("flip_alt")){
+  $( ".content_3, .content_4, .content_5, .content_6" ).addClass( "flip_alt_back");
+  $( ".content_3, .content_4, .content_5, .content_6" ).removeClass( "flip_alt");
 }
 });
 
@@ -28,9 +28,9 @@ $( ".icon_wrapper_2" ).click(function() {
 });
 
 $( ".icon_wrapper_2" ).click(function(){
-  if($( ".content_2, .content_4, .content_5" ).hasClass("flip_alt")){
-    $( ".content_2, .content_4, .content_5" ).addClass( "flip_alt_back");
-    $( ".content_2, .content_4, .content_5" ).removeClass( "flip_alt");
+  if($( ".content_2, .content_4, .content_5, .content_6" ).hasClass("flip_alt")){
+    $( ".content_2, .content_4, .content_5, .content_6" ).addClass( "flip_alt_back");
+    $( ".content_2, .content_4, .content_5, .content_6" ).removeClass( "flip_alt");
   }
   });
 
@@ -55,9 +55,9 @@ $( ".icon_wrapper_3" ).click(function() {
 });
 
 $( ".icon_wrapper_3" ).click(function(){
-  if($( ".content_2, .content_3, .content_5" ).hasClass("flip_alt")){
-    $( ".content_2, .content_3, .content_5" ).addClass( "flip_alt_back");
-    $( ".content_2, .content_3, .content_5" ).removeClass( "flip_alt");
+  if($( ".content_2, .content_3, .content_5, .content_6" ).hasClass("flip_alt")){
+    $( ".content_2, .content_3, .content_5, .content_6" ).addClass( "flip_alt_back");
+    $( ".content_2, .content_3, .content_5, .content_6" ).removeClass( "flip_alt");
   }
   });
 
@@ -80,9 +80,9 @@ $( ".icon_wrapper_4" ).click(function() {
 });
 
 $( ".icon_wrapper_4" ).click(function(){
-  if($( ".content_2, .content_3, .content_4" ).hasClass("flip_alt")){
-    $( ".content_2, .content_3, .content_4" ).addClass( "flip_alt_back");
-    $( ".content_2, .content_3, .content_4" ).removeClass( "flip_alt");
+  if($( ".content_2, .content_3, .content_4, .content_6" ).hasClass("flip_alt")){
+    $( ".content_2, .content_3, .content_4, .content_6" ).addClass( "flip_alt_back");
+    $( ".content_2, .content_3, .content_4, .content_6" ).removeClass( "flip_alt");
   }
   });
 
@@ -97,6 +97,33 @@ $( ".icon_wrapper_4" ).click(function() {
       $( ".content_1" ).addClass( "flip_back" );
     }
 });
+
+/* 5 PROJECT */
+
+$( ".projects_button" ).click(function() {
+  $( ".content_6" ).toggleClass( "flip_alt flip_alt_back" );
+});
+
+$( ".projects_button" ).click(function(){
+  if($( ".content_2, .content_3, .content_4, .content_5" ).hasClass("flip_alt")){
+    $( ".content_2, .content_3, .content_4, .content_5" ).addClass( "flip_alt_back");
+    $( ".content_2, .content_3, .content_4, .content_5" ).removeClass( "flip_alt");
+  }
+  });
+
+$( ".projects_button" ).click(function() {
+  if($(".content_6").hasClass("flip_alt")){
+    $( ".content_1" ).addClass( "flip");
+    $( ".content_1" ).removeClass( "flip_back");
+
+
+    }
+    else{
+      $( ".content_1" ).addClass( "flip_back" );
+    }
+});
+
+
 
 
 /* HOVER BUTTON AFFECT CONTENT 1 & DOT GRID */
@@ -170,4 +197,28 @@ $( ".media_button" ).click(function() {
 }
 else{$( ".top_links_wrapper").addClass("media_open")}
 });
+
+/*MOVE LITTLE ARROW LINK A FEW DEGREES!*/
+$(function() {
+  $('.project_link_button').hover(function() {
+  
+   $('.fa-arrow-right').css('transform', 'rotateZ(-45deg)');
+  
+  }, function() {
+    // on mouseout, reset the background colour
+    $('.fa-arrow-right').css('transform', 'rotateZ(0deg)');
+    
+  });
+});
+
+/*CLICK IMAGE EXPAND PROJECT DESCRIPTION*/
+
+ 
+  $('.project_img').click(function() {
+  
+   $('.project_p').toggleClass('no_show');
+   $('.project_link_button').toggleClass('no_show');
+   
+  });
+
 
