@@ -128,7 +128,7 @@ $( ".projects_button" ).click(function() {
 
 /* HOVER BUTTON AFFECT CONTENT 1 & DOT GRID */
 $(function() {
-  $('.icon_wrapper:nth-child(1) p').hover(function() {
+  $('.icon_wrapper:nth-child(2) p').hover(function() {
   
    $('.content_1 p, .content_2 p, .content_3 p, .content_4 p, .content_5 p').addClass('hover_color_r');
    $('.content_1 p, .content_2 p, .content_3 p, .content_4 p, .content_5 p').css('border-left', 'solid 3px red');
@@ -145,7 +145,7 @@ $(function() {
 });
 
 $(function() {
-  $('.icon_wrapper:nth-child(2) p').hover(function() {
+  $('.icon_wrapper:nth-child(3) p').hover(function() {
   
    $('.content_1 p, .content_2 p, .content_3 p, .content_4 p, .content_5 p').addClass('hover_color_y');
    $('.content_1 p, .content_2 p, .content_3 p, .content_4 p, .content_5 p').css('border-left', 'solid 3px yellow');
@@ -160,7 +160,7 @@ $(function() {
 });
 
 $(function() {
-  $('.icon_wrapper:nth-child(3) p').hover(function() {
+  $('.icon_wrapper:nth-child(4) p').hover(function() {
   
    $('.content_1 p, .content_2 p, .content_3 p, .content_4 p, .content_5 p').addClass('hover_color_g');
    $('.content_1 p, .content_2 p, .content_3 p, .content_4 p, .content_5 p').css('border-left', 'solid 3px rgb(0, 255, 0)');
@@ -174,7 +174,7 @@ $(function() {
 });
 
 $(function() {
-  $('.icon_wrapper:nth-child(4) p').hover(function() {
+  $('.icon_wrapper:nth-child(5) p').hover(function() {
   
    $('.content_1 p, .content_2 p, .content_3 p, .content_4 p, .content_5 p').addClass('hover_color_b');
    $('.content_1 p, .content_2 p, .content_3 p, .content_4 p, .content_5 p').css('border-left', 'solid 3px blue');
